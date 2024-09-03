@@ -1,7 +1,9 @@
 import { Router } from "express";
 
 const router = Router();
+//User Crudd
 
+// Create User
 
 router.post('/', (req,res) =>{
     res.status(501).json({error:"Not implemented"})

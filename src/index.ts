@@ -12,9 +12,8 @@ app.get('/', (req,res)=> {
     res.send("Hello World updated");
 });
 
-//User Crudd
-
-// Create User
+//Time on backend video
+//1:00:00
 
 
 app.listen(3000, () => {
