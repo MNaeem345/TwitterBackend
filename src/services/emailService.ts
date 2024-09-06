@@ -1,6 +1,10 @@
 import {SendEmailCommand, SESClient} from '@aws-sdk/client-ses';
+import {error} from 'console';
+require('dotenv').config()
 
-const ses = new SESClient({});
+console.log(process.env.AWS_ACCESS_KEY_ID)
+
+const ses = new SESClient({region:'us-east-2'});
 
 function createSendEmailCommand(toAddress:string, fromAddress:string, message:string){
     return new SendEmailCommand({
@@ -34,9 +38,8 @@ export async function sendEmailToken(email:string, token:string){
         return await ses.send(command);
     } catch (e){
         console.log("Error sending email", e);
-        return e;
+        return error;
     }
 
 }
 
-sendEmailToken("mohammednaeem345@gmail.com", "123")
