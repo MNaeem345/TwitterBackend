@@ -16,11 +16,10 @@ app.get('/', (req,res)=> {
 });
 
 //Time on backend video
-//2:19:00
+//4:36:37
 
 
 app.listen(3000, () => {
     console.log("Server ready at localhost:3000");
 });
 
-//time stamp 20:32
